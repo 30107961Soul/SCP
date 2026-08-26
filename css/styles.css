@@ -1,0 +1,286 @@
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    background: #e9ecef;
+    color: #20252a;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.65
+}
+
+a {
+    color: #173a57;
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+.site-header {
+    background: #11161a;
+    color: #fff;
+    border-bottom: 4px solid #c51f2b;
+    position: sticky;
+    top: 0;
+    z-index: 10
+}
+
+.nav-wrap {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 22px
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: .08em;
+    white-space: nowrap
+}
+
+.scp-logo {
+    width: 42px;
+    height: 42px;
+    display: block;
+    object-fit: contain
+}
+
+.brand-mark {
+    display: none
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-left: auto
+}
+
+.nav a {
+    color: #e8edf0;
+    padding: 8px 10px;
+    border-radius: 4px;
+    font-size: .92rem
+}
+
+.nav a:hover,
+.nav a:focus {
+    background: #303940;
+    text-decoration: none
+}
+
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 52px 20px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px
+}
+
+.kicker {
+    font-size: .78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: #a3222b
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin: .15em 0
+}
+
+h2 {
+    font-size: 1.45rem;
+    margin-top: 0
+}
+
+.subtitle {
+    color: #5c656c
+}
+
+.class-badge {
+    background: #fff;
+    border: 1px solid #c9cdd1;
+    border-left: 5px solid #c51f2b;
+    padding: 10px 14px;
+    font-weight: 700;
+    white-space: nowrap
+}
+
+.meta {
+    max-width: 1200px;
+    margin: 0 auto 22px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px
+}
+
+.meta-card,
+.section,
+.toc {
+    background: #fff;
+    border: 1px solid #d4d9dd;
+    border-radius: 8px
+}
+
+.meta-card {
+    padding: 14px 16px
+}
+
+.meta-label {
+    font-size: .75rem;
+    text-transform: uppercase;
+    color: #6d747a
+}
+
+.meta-value {
+    font-weight: 700
+}
+
+.content-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 22px
+}
+
+.article {
+    min-width: 0
+}
+
+.section {
+    padding: 22px;
+    margin-bottom: 18px
+}
+
+.object-image {
+    margin: 20px 0;
+    text-align: center
+}
+
+.object-image img {
+    max-width: 100%;
+    width: min(760px, 100%);
+    max-height: 520px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #c9ced2;
+    background: #111
+}
+
+.toc {
+    height: max-content;
+    position: sticky;
+    top: 82px;
+    padding: 16px
+}
+
+.toc h2 {
+    font-size: 1rem
+}
+
+.toc a {
+    display: block;
+    padding: 7px 0;
+    border-bottom: 1px solid #e6e8ea;
+    font-size: .9rem
+}
+
+.pager {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 20px 0
+}
+
+.pager a {
+    background: #fff;
+    border: 1px solid #ccd1d5;
+    padding: 10px 14px;
+    border-radius: 6px
+}
+
+.site-footer {
+    background: #11161a;
+    color: #cfd5d8;
+    padding: 24px 20px
+}
+
+.footer-wrap {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: .9rem
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px
+}
+
+.skip-link:focus {
+    left: 10px;
+    top: 10px;
+    background: #fff;
+    padding: 8px;
+    z-index: 100
+}
+
+@media(max-width:800px) {
+    .nav-wrap {
+        align-items: flex-start;
+        flex-wrap: wrap
+    }
+
+    .nav {
+        margin-left: 0;
+        width: 100%
+    }
+
+    .hero {
+        display: block;
+        padding-top: 35px
+    }
+
+    .class-badge {
+        display: inline-block;
+        margin-top: 14px
+    }
+
+    .meta {
+        grid-template-columns: 1fr
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr
+    }
+
+    .toc {
+        position: static
+    }
+
+    .footer-wrap {
+        flex-direction: column
+    }
+}
